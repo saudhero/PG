@@ -1,21 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
 
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    {% load static %}
 
-{% block content %}
-  <h1>Registration</h1>
-  {% if error %}
-    <p class="error">{{ error }}</p>
-  {% endif %}
-  <form method="post" action="{% url 'myapp:registration' %}">
-    {% csrf_token %}
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required><br><br>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required><br><br>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required><br><br>
-    <label for="phone_number">Phone Number:</label>
-    <input type="text" id="phone_number" name="phone_number" required><br><br>
-    <input type="submit" value="Register">
-    
-  </form>
-{% endblock %}
+    <link rel="stylesheet" href="{% static 'myapp/signup.css' %}">
+</head>
+<body>
+    <section class="signup">
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-form">
+                    <h2 class="form-title">Sign up</h2>
+                    {% if error %}
+                        <p class="error">{{ error }}</p>
+                    {% endif %}
+                    <form method="post" action="{% url 'myapp:registration' %}" class="register-form" id="register-form">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username" placeholder="Username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone_number">Phone Number</label>
+                            <input type="text" id="phone_number" name="phone_number" placeholder="Phone Number" required>
+                            <a href="{% url 'myapp:login' %}" class="signup-image-link">I am already a member</a>
+                        </div>
+                        <div class="form-group form-button">
+                            <input type="submit" value="Register" class="form-submit">
+                        </div>
+                    </form>
+                </div>
+                <div class="signup-image">
+                    <img src="{% static 'myapp/images/signup.png.jpg' %}" alt="sign up image">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

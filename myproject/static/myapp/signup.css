@@ -1,0 +1,81 @@
+/* Additional CSS styles */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+.signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px; /* Adjust this value to make the card bigger */
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Adjust this value to change the radius */
+}
+
+.signup-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.signup-form {
+    flex-basis: 60%;
+    margin-bottom: 20px;
+}
+
+.signup-image {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-submit {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.signup-image-link {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+    text-decoration: underline;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}

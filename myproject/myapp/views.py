@@ -38,9 +38,21 @@ def login(request):
             user = User.objects.get(email=email, password=password)
             return redirect('myapp:home')
         except User.DoesNotExist:
-            return render(request, 'myapp/login.html', {'error': 'Invalid email or password.'})
+            return render(request, 'myapp/login.html', {'error': 'غلط ياحمار.'})
 
     return render(request, 'myapp/login.html')
 
 def home(request):
     return render(request, 'myapp/home.html')
+
+def phishing_detection(request):
+    # Logic to fetch and process data for phishing detection
+    return render(request, 'services/phishing_detection.html')
+
+def articles(request):
+    # Logic to fetch and process data for articles
+    return render(request, 'services/articles.html')
+
+def video(request):
+    # Logic to fetch and process data for video
+    return render(request, 'services/video.html')

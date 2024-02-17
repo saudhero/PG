@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- services/video.html -->
+<h1>Video</h1>
+
+<form method="post" action="{% url 'myapp:video' %}">
+  {% csrf_token %}
+  <label for="video_url">Video URL:</label>
+  <input type="url" id="video_url" name="video_url" required>
+  
+  <!-- Add more form fields as needed -->
+  
+  <button type="submit">Submit</button>
+</form>
+</body>
+</html>

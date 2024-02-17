@@ -1,0 +1,81 @@
+/* Additional CSS styles */
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 50vw; /* Adjust this value to change the width percentage */
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* Adjust this value to change the radius */
+}
+
+.signin-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.signin-image {
+  flex-basis: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.signin-form {
+  flex-basis: 55%;
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-button {
+  text-align: center;
+}
+
+.signup-image {
+  text-align: center;
+}
+
+.signup-image-text {
+  margin-bottom: 10px;
+}
+
+.signup-image-link {
+  display: inline-block;
+  color: #333;
+  text-decoration: underline;
+}
